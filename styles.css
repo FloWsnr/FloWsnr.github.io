@@ -244,3 +244,61 @@ h1 {
 .paper-link:hover {
     background: #444;
 }
+
+/* Hobbies page specific styles */
+.hobby-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+    gap: 2rem;
+}
+
+.hobby-section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.hobby-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hobby-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.hobby-image img:hover {
+    transform: scale(1.02);
+}
+
+.hobby-content {
+    flex: 1;
+    padding: 1rem;
+}
+
+.hobby-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+.hobby-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+@media (max-width: 768px) {
+
+    .hobby-section,
+    .hobby-section:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .hobby-image {
+        max-width: 100%;
+    }
+}

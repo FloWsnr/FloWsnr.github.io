@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Ensure UTF-8 charset is set first
+    if (!document.head.querySelector('meta[charset]')) {
+        const charsetMeta = document.createElement('meta');
+        charsetMeta.setAttribute('charset', 'UTF-8');
+        document.head.insertBefore(charsetMeta, document.head.firstChild);
+    }
+
     // Check if we're in a subdirectory by looking at the current path
     const path = window.location.pathname;
     const isInPagesDir = path.includes('/pages/');

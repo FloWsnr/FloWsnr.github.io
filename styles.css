@@ -245,6 +245,42 @@ h1 {
     background: #444;
 }
 
+.paper-description {
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.paper-abstract {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f8f8f8;
+    border-left: 3px solid #333;
+    transition: max-height 0.3s ease-out;
+}
+
+.paper-abstract.hidden {
+    display: none;
+}
+
+.abstract-toggle {
+    cursor: pointer;
+    border: none;
+    background: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.abstract-toggle:hover {
+    background: #444;
+}
+
+.abstract-toggle.active {
+    background: #555;
+}
+
 /* Hobbies page specific styles */
 .hobby-section {
     display: flex;

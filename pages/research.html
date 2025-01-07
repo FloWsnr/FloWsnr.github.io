@@ -5,6 +5,24 @@
     <meta charset="UTF-8">
     <title>Research - Florian Wiesner</title>
     <script src="../header.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.abstract-toggle').forEach(button => {
+                button.addEventListener('click', function () {
+                    const paper = this.closest('.paper');
+                    const abstract = paper.querySelector('.paper-abstract');
+                    const isHidden = abstract.classList.contains('hidden');
+
+                    // Toggle abstract visibility
+                    abstract.classList.toggle('hidden');
+
+                    // Update button text and style
+                    this.textContent = isHidden ? 'Hide Abstract' : 'Abstract';
+                    this.classList.toggle('active');
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -22,7 +40,16 @@
                 <div class="paper-authors">Florian Wiesner, James Woodford, Mayank Sabharwal, Matthias Hesselmann,
                     Seongyeop Jung, Matthias Wessling, Marc Secanell</div>
                 <div class="paper-venue">ACS Applied Materials & Interfaces, 2024</div>
-                <div class="paper-abstract">
+                <div class="paper-description">
+                    <p>
+                        We developed new algorithms to study how PTFE coating affects water management in fuel cell
+                        components.
+                        Our models show that PTFE reduces water content and improves gas transport, explaining why PTFE
+                        coating
+                        is beneficial for fuel cell performance.
+                    </p>
+                </div>
+                <div class="paper-abstract hidden">
                     <p>
                         Gas diffusion layers (GDLs) are usually coated with a hydrophobic agent to achieve a delicate
                         balance between liquid and
@@ -50,7 +77,7 @@
                         in saturation with
                         increasing PTFE, in agreement with experimental observations. The decreased saturation at
                         breakthrough improves gas
-                        transport through the layer while maintaining the layer’s ability to remove water. Diffusivity
+                        transport through the layer while maintaining the layer's ability to remove water. Diffusivity
                         simulations confirm the
                         increase in diffusivity at breakthrough with increasing PTFE, thereby providing a rationale for
                         the addition of PTFE, as
@@ -62,8 +89,7 @@
                 </div>
                 <div class="paper-links">
                     <a href="https://doi.org/10.1002/smll.202310427" class="paper-link">DOI</a>
-                    <!-- <a href="#" class="paper-link">Code</a>
-                   <a href="#" class="paper-link">Citation</a> -->
+                    <button class="paper-link abstract-toggle">Abstract</button>
                 </div>
             </article>
             <!-- Add more papers here -->
@@ -75,7 +101,16 @@
                 <div class="paper-authors">Sebastian Brosch, Florian Wiesner, Alexandra Decker, John Linkhorst, Matthias
                     Wessling</div>
                 <div class="paper-venue">small, 2024</div>
-                <div class="paper-abstract">
+                <div class="paper-description">
+                    <p>
+                        We developed a novel experimental setup to visualize and study the complex interactions between
+                        water
+                        and electrodes in CO2 reduction devices. Our findings help understand how to design better
+                        electrodes
+                        for CO2 conversion.
+                    </p>
+                </div>
+                <div class="paper-abstract hidden">
                     <p>
                         The use of gas diffusion electrodes (GDEs) enables efficient electrochemical CO2 reduction and
                         may be a viable
@@ -104,8 +139,7 @@
                 </div>
                 <div class="paper-links">
                     <a href="https://doi.org/10.1002/smll.202310427" class="paper-link">DOI</a>
-                    <!-- <a href="#" class="paper-link">Code</a>
-                    <a href="#" class="paper-link">Citation</a> -->
+                    <button class="paper-link abstract-toggle">Abstract</button>
                 </div>
             </article>
             <!-- Add more papers here -->
@@ -116,7 +150,16 @@
                 <div class="paper-authors">Florian Wiesner, Alexander Limper, Cedric Marth, Anselm Brodersen, Matthias
                     Wessling, John Linkhorst</div>
                 <div class="paper-venue">Advanced Engineering Materials, 2023</div>
-                <div class="paper-abstract">
+                <div class="paper-description">
+                    <p>
+                        We used 3D printing to create novel electrode designs based on mathematical surfaces called
+                        gyroids.
+                        These designs significantly improve the efficiency of electrochemical reactors by enhancing mass
+                        transport
+                        and increasing the active surface area.
+                    </p>
+                </div>
+                <div class="paper-abstract hidden">
                     <p>
                         Electrochemical flow reactors facilitate the storage of renewable energies and the
                         carbon-neutral production of platform
@@ -126,7 +169,7 @@
                         designs. Herein, 3D
                         intertwined electrode pairs are presented, based on triply periodic minimal surfaces that
                         facilitate mass transport and
-                        provide high surface areas. Three gyroid designs with outer dimensions of 20 × 40 × 70 mm are
+                        provide high surface areas. Three gyroid designs with outer dimensions of 20 × 40 × 70 mm are
                         manufactured from
                         stainless steel via selective laser melting and implemented into a conventional flow cell. By
                         design, the electrodes are
@@ -147,8 +190,7 @@
                 </div>
                 <div class="paper-links">
                     <a href="https://doi.org/10.1002/adem.202200986" class="paper-link">DOI</a>
-                    <!-- <a href="#" class="paper-link">Code</a>
-                                <a href="#" class="paper-link">Citation</a> -->
+                    <button class="paper-link abstract-toggle">Abstract</button>
                 </div>
             </article>
             <!-- Add more papers here -->
@@ -159,7 +201,16 @@
                 <div class="paper-authors">Alexandra Rommerskirchen, Michael Alders, Florian Wiesner, Christian J
                     Linnartz, Anna Kalde, Matthias Wessling</div>
                 <div class="paper-venue">Journal of Membrane Science, 2020</div>
-                <div class="paper-abstract">
+                <div class="paper-description">
+                    <p>
+                        We developed the first comprehensive model for a novel water desalination technology that can
+                        handle
+                        very salty water. The model helps understand how salt moves through special membranes and guides
+                        the
+                        design of better desalination systems.
+                    </p>
+                </div>
+                <div class="paper-abstract hidden">
                     <p>
                         Flow-electrode capacitive deionization (FCDI) is an electrically driven water desalination
                         technology promising for many
@@ -189,8 +240,7 @@
                 </div>
                 <div class="paper-links">
                     <a href="https://doi.org/10.1016/j.memsci.2020.118614" class="paper-link">DOI</a>
-                    <!-- <a href="#" class="paper-link">Code</a>
-                    <a href="#" class="paper-link">Citation</a> -->
+                    <button class="paper-link abstract-toggle">Abstract</button>
                 </div>
             </article>
             <!-- Add more papers here -->

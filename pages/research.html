@@ -33,7 +33,86 @@
 
         <section class="research-section">
             <h2 class="section-title">Publications</h2>
+            <!-- Data Science Conference -->
+            <article class="hobby-section">
+                <div class="hobby-content paper">
+                    <h3 class="paper-title">Leveraging Machine Learning and Data Mining for Enhanced PEM-Electrolysis
+                        Using Standardized Data Management</h3>
+                    <div class="paper-authors">Stephan Zimmer, Florian Wiesner, Jannis Steiger, Robert Keller and
+                        Matthias Wessling</div>
+                    <div class="paper-venue">PriME Conference, 2024</div>
+                    <div class="paper-description">
+                        <p>
+                            This conference presentation was a sneak peek into work I am currently doing with Stephan
+                            Zimmer.
+                            We are using machine learning (XGBoost) to predict the performance of PEM electrolysis
+                            reactors. For this we build a database from more than 200 publications, predict cell
+                            potentials
+                            and calculate metrics such as feature importance.
+                        </p>
+                    </div>
+                    <div class="paper-abstract hidden">
+                        <p>
+                            Green Hydrogen production by water electrolysis is paramount in the transition from fossil
+                            fuels towards a carbon
+                            neutral industry. Hydrogen is expected to function as energy carrier in mobility, energy
+                            storage medium in electricity
+                            grids and as regenerative fuel in industrial processes such as steel production. Proton
+                            exchange membrane water
+                            electrolysis (PEMWE) stands out as a promising technology for hydrogen production due to
+                            high current densities with
+                            high efficiencies and highly dynamic operation. While the number of publications on the
+                            production of PEM electrolysers
+                            grows steadily, a lack of standardized methodologies and experimental guidelines persists.
+                            Many studies focus on
+                            specific components and their manufacturing steps, hindering direct comparison and
+                            complicating data interpretation.
+                            Consequently, standardization of research data and specification of parameters is the
+                            objective of the current research
+                            landscape.
 
+                            In this work, we systematically analyzed literature and gathered meta data regarding
+                            experimental procedures for
+                            lab-scale production of PEM electrolysers. Thereby, special attention is on the
+                            identification of potential improvement
+                            in data management. The production of electrolysers can be divided into the various tasks as
+                            the fabrication of membrane
+                            electrode assemblies (MEAs), which includes catalyst ink production, coating and assembly,
+                            electrolyser design and
+                            characterization. All areas are in turn subdivided into metadata, for example the ionomer to
+                            catalyst ratio and catalyst
+                            content for the catalyst ink, the coating technology such as spray or slot coating for the
+                            coating. In total, over 60
+                            different parameters were considered and a database with over 600 different samples from
+                            publications around the world
+                            was created. Incomplete datasets were determined by classification using various methods,
+                            such as k-nearest-neighbors.
+
+                            The extensive database was implemented in various machine learning algorithms with the goal
+                            of identifying parameters
+                            with a significant influence on the target variable based on the polarization curve. We then
+                            identify correlations
+                            between different parameters and formulate guidelines for individual fabrication steps and
+                            materials for electrolyzers.
+                            An optimization is then applied to determine the most favorable procedure for MEA
+                            fabrication and assembling
+                            electrolysers, incorporating all the parameters from the database.
+
+                            This work lays the foundation for future publications regarding the standardization of
+                            research data and shows how
+                            correlations between different parameters can be identified and optimized with the help of
+                            data management.
+                        </p>
+                    </div>
+                    <div class="paper-links">
+                        <a href="https://doi.org/10.1021/acsami.4c04641" class="paper-link">DOI</a>
+                        <button class="paper-link abstract-toggle">Abstract</button>
+                    </div>
+                </div>
+                <div class="hobby-image">
+                    <!-- <img src="../assets/images/research/gdl_wetting.jpg" alt="PTFE Surface Coverage Study"> -->
+                </div>
+            </article>
             <!-- PTFE Paper -->
             <article class="hobby-section">
                 <div class="hobby-image">
@@ -93,7 +172,7 @@
                         </p>
                     </div>
                     <div class="paper-links">
-                        <a href="https://doi.org/10.1002/smll.202310427" class="paper-link">DOI</a>
+                        <a href="https://doi.org/10.1021/acsami.4c04641" class="paper-link">DOI</a>
                         <button class="paper-link abstract-toggle">Abstract</button>
                     </div>
                 </div>

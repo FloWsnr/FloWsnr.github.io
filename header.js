@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Updated to handle data/blog directory paths
     // Ensure UTF-8 charset is set first
     if (!document.head.querySelector('meta[charset]')) {
         const charsetMeta = document.createElement('meta');
@@ -9,7 +10,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Check if we're in a subdirectory by looking at the current path
     const path = window.location.pathname;
     const isInPagesDir = path.includes('/pages/');
-    const prefix = isInPagesDir ? '../' : '';
+    const isInDataBlogDir = path.includes('/data/blog/');
+
+    let prefix = '';
+    if (isInPagesDir) {
+        prefix = '../';
+    } else if (isInDataBlogDir) {
+        prefix = '../../';
+    }
 
     // Load and process header
     fetch(prefix + 'header.html')
@@ -23,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 .replace(/STYLE_PATH/g, prefix + 'styles.css')
                 .replace(/NAV_PATH/g, prefix + 'header.js')
                 .replace(/HOME_PATH/g, prefix + 'index.html')
-                .replace(/PAGES_PATH/g, isInPagesDir ? '.' : 'pages');
+                .replace(/PAGES_PATH/g, isInPagesDir ? '.' : (isInDataBlogDir ? '../../pages' : 'pages'));
 
             // Parse the header content
             const headerContent = new DOMParser().parseFromString(data, 'text/html');

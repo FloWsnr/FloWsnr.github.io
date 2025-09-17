@@ -10,6 +10,17 @@ body {
     color: #333;
 }
 
+/* General link styling for text content */
+a {
+    color: #2f5896;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1d8dd8;
+}
+
 nav {
     background: #333;
     padding: 1rem;
@@ -73,13 +84,14 @@ h1 {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
     align-items: center;
 }
 
 .hero-text {
     text-align: left;
+    justify-self: end;
 }
 
 .hero-text .name {
@@ -91,7 +103,9 @@ h1 {
     font-size: 1.1rem;
     line-height: 1.6;
     margin: 0;
+    max-width: 600px;
 }
+
 
 .hero-image {
     display: flex;
@@ -126,7 +140,7 @@ h1 {
 /* Projects page specific styles */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
 
@@ -481,6 +495,10 @@ h1 {
     .content-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 
     .latest-content {

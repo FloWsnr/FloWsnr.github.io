@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Blog - Florian Wiesner</title>
     <script src="../header.js"></script>
+    <script src="../blog-loader.js"></script>
 </head>
 
 <body>
@@ -12,21 +13,14 @@
 
     <div class="container">
         <h1>Blog Posts</h1>
-
-        <!-- Example Blog Post (Duplicate and modify for your posts) -->
-        <article class="blog-post">
-            <div class="post-date">January 19, 2025</div>
-            <h2 class="post-title">New snowboarding hype</h2>
-            <div class="post-preview">
-                <p>
-                    After a longer break from snowboarding, I finally got back on the slopes for two weeks this January.
-                    I honestly forgot how much I love snowboarding and in gerneral being on the mountain.
-                </p>
-            </div>
-            <a href="#" class="read-more">Read More</a>
-        </article>
-        <!-- Add more blog posts here -->
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async function() {
+            const blogPosts = await loadBlogPosts();
+            renderBlogPage(blogPosts);
+        });
+    </script>
 </body>
 
 </html>

@@ -1,9 +1,9 @@
-headline: "Research Stay at University of Virginia"
+headline: "Physics Foundation Model Research at University of Virginia"
 date: "2025-01"
 text: |
   I'm currently conducting research at the University of Virginia in Charlottesville, working with
-  Stephen Baek's lab on developing a physics foundation model. This exciting project aims to create
-  a model that can predict the behavior of multiple physical systems using advanced machine learning techniques.
-
-  The research stay provides an excellent opportunity to collaborate with leading researchers in the field
+  <a href="https://stephenbaek.github.io/lab/" target="_blank" rel="noopener noreferrer">Stephen Baek's lab</a> on developing a physics foundation model. This exciting project aims to create
+  a model that can predict the behavior of multiple physical systems using spatio-temporal attention and a numerical integrator.
+  The key point is to leverage in-context learning to enable the model to generalize across different physical domains.
+  The research stay also provides an excellent opportunity to collaborate with leading researchers in the field
   of AI for science and expand my expertise in physics-informed machine learning.

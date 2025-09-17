@@ -5,25 +5,57 @@
     <meta charset="UTF-8">
     <title>Florian Wiesner</title>
     <script src="header.js"></script>
+    <script src="news-loader.js"></script>
 </head>
 
 <body>
     <section class="hero">
-        <img src="assets/images/profile/202408_netherlands_flwi.jpg" alt="Profile Photo" class="profile-img">
-        <h1 class="name">Florian Wiesner</h1>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="name">Florian Wiesner</h1>
+                <p>
+                    Welcome to my personal website! I am a PhD student at the RWTH Aachen University, Germany, currently working
+                    on
+                    physics ML and geometric ML. I am interested in all things artificial intelligence, but specifically AI for
+                    science!
+
+                    This is where I share my work, thoughts, and research. Feel free to explore my projects or check out my
+                    research papers. All beliefs are my own, and sometimes they might just be generic ramblings.
+                </p>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/profile/202408_netherlands_flwi.jpg" alt="Profile Photo" class="profile-img">
+            </div>
+        </div>
     </section>
 
-    <section class="intro">
-        <p>
-            Welcome to my personal website! I am a PhD student at the RWTH Aachen University, Germany, currently working
-            on
-            physics ML and geometric ML. I am interested in all things artificial intelligence, but specifically AI for
-            science!
+    <section class="latest-content">
+        <div class="container">
+            <div class="content-grid">
+                <div class="latest-news">
+                    <h2>Latest News</h2>
+                    <a href="pages/news.html" class="view-all-link">View All News →</a>
+                </div>
 
-            This is where I share my work, thoughts, and research. Feel free to explore my projects or check out my
-            research papers. All beliefs are my own, and sometimes they might just be generic ramblings.
-        </p>
+                <div class="latest-posts">
+                    <h2>Latest Posts</h2>
+                    <div class="post-item">
+                        <div class="post-date">January 19, 2025</div>
+                        <div class="post-title">New snowboarding hype</div>
+                        <div class="post-summary">After a longer break from snowboarding, I finally got back on the slopes for two weeks this January.</div>
+                    </div>
+                    <a href="pages/blog.html" class="view-all-link">View All Posts →</a>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async function() {
+            const newsItems = await loadNewsSnippets();
+            renderLatestNews(newsItems, 2);
+        });
+    </script>
 </body>
 
 </html>

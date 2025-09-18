@@ -33,27 +33,58 @@
 
         <section class="research-section">
             <h2 class="section-title">Scientific Publications</h2>
+
+
             <article class="hobby-section">
                 <div class="hobby-image">
-                    <img src="../assets/images/research/tbd.jpg" alt="">
+                    <img src="../assets/images/research/gphyt_arch.jpg" alt="Model Architecture for GPhyT">
                 </div>
                 <div class="hobby-content paper">
-                    <h3 class="paper-title">Physics Foundation Model</h3>
-                    <div class="paper-authors">Florian Wiesner, Stephen Baek</div>
-                    <div class="paper-venue">In progress</div>
+                    <h3 class="paper-title">Towards a Physics Foundation Model</h3>
+                    <div class="paper-authors">Florian Wiesner, Matthias Wessling, Stephen Baek</div>
+                    <div class="paper-venue">Preprint, Under review.</div>
                     <div class="paper-description">
-                        <p>
-                            I am currently working on a physics foundation model during my research stay
-                            at the University of Virigina in Charlottesville. This is a model that can be used to
-                            predict the behavior of multiple physical systems.
-                        </p>
+                        <p>During my time at UVA, Stephen Baek and I wondered whether we could build a foundation model
+                            for physics simulations. We trained a large transformer model on a diverse set of physics
+                            simulations. The model is able to predict the evolution of systems it has never seen before.
+                            This is a first step towards a universal
+                            physics simulator, but much more data and larger model are needed for real-world
+                            applications.</p>
+
                     </div>
                     <div class="paper-abstract hidden">
                         <p>
+                            Foundation models have revolutionized natural language processing through a ``train once,
+                            deploy anywhere'' paradigm,
+                            where a single pre-trained model adapts to countless downstream tasks without retraining.
+                            Access to a Physics Foundation
+                            Model (PFM) would be transformative -- democratizing access to high-fidelity simulations,
+                            accelerating scientific
+                            discovery, and eliminating the need for specialized solver development. Yet current
+                            physics-aware machine learning
+                            approaches remain fundamentally limited to single, narrow domains and require retraining for
+                            each new system. We present
+                            the General Physics Transformer (GPhyT), trained on 1.8 TB of diverse simulation data, that
+                            demonstrates foundation
+                            model capabilities are achievable for physics. Our key insight is that transformers can
+                            learn to infer governing
+                            dynamics from context, enabling a single model to simulate fluid-solid interactions, shock
+                            waves, thermal convection,
+                            and multi-phase dynamics without being told the underlying equations. GPhyT achieves three
+                            critical breakthroughs: (1)
+                            superior performance across multiple physics domains, outperforming specialized
+                            architectures by up to 29x, (2)
+                            zero-shot generalization to entirely unseen physical systems through in-context learning,
+                            and (3) stable long-term
+                            predictions through 50-timestep rollouts. By establishing that a single model can learn
+                            generalizable physical
+                            principles from data alone, this work opens the path toward a universal PFM that could
+                            transform computational science
+                            and engineering.
                         </p>
                     </div>
                     <div class="paper-links">
-                        <a href="https://stephenbaek.github.io/lab/" class="paper-link">Lab Website</a>
+                        <a href="https://arxiv.org/abs/2509.13805" class="paper-link">DOI</a>
                         <button class="paper-link abstract-toggle">Abstract</button>
                     </div>
                 </div>
@@ -131,7 +162,8 @@
                         </p>
                     </div>
                     <div class="paper-links">
-                        <a href="https://doi.org/10.1021/acsami.4c04641" class="paper-link">DOI</a>
+                        <a href="https://iopscience.iop.org/article/10.1149/MA2024-02453159mtgabs"
+                            class="paper-link">DOI</a>
                         <button class="paper-link abstract-toggle">Abstract</button>
                     </div>
                 </div>

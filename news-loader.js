@@ -147,21 +147,14 @@ function renderLatestNews(newsItems, limit = 2) {
     latestNewsContainer.innerHTML = '';
     latestNewsContainer.appendChild(title);
 
-    // Add latest news items
+    // Add latest news items (headlines only)
     newsItems.slice(0, limit).forEach(item => {
         const newsItem = document.createElement('div');
         newsItem.className = 'news-item';
 
-        // Create a summary (first paragraph or first 150 characters)
-        const firstParagraph = item.text.split('\n\n')[0];
-        const summary = firstParagraph.length > 150
-            ? firstParagraph.substring(0, 150) + '...'
-            : firstParagraph;
-
         newsItem.innerHTML = `
             <div class="news-date">${item.date}</div>
             <div class="news-title">${item.headline}</div>
-            <div class="news-summary">${summary}</div>
         `;
 
         latestNewsContainer.appendChild(newsItem);

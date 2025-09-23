@@ -409,6 +409,60 @@ class ClipboardManager {
     }
 }
 
+// GIF Synchronization for Physics Blog
+class GifSynchronizer {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        // Find all GIF grids
+        const gifGrids = document.querySelectorAll('.gif-grid-3x3-nospace, .gif-grid-4x2-nospace, .gif-grid-3x2-nospace');
+
+        gifGrids.forEach(grid => {
+            this.setupGridSync(grid);
+        });
+    }
+
+    setupGridSync(grid) {
+        const images = grid.querySelectorAll('img[src$=".gif"]');
+
+        if (images.length === 0) return;
+
+        // Store original sources
+        const originalSources = Array.from(images).map(img => img.src);
+
+        // Function to sync all GIFs in this grid
+        const syncGifs = () => {
+            images.forEach((img, index) => {
+                // Force reload by adding timestamp
+                const timestamp = new Date().getTime();
+                const separator = originalSources[index].includes('?') ? '&' : '?';
+                img.src = originalSources[index] + separator + 't=' + timestamp;
+            });
+        };
+
+        // Sync on hover removed - automatic sync only
+
+        // Also sync when grid becomes visible (using Intersection Observer)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Small delay to ensure images are loaded
+                    setTimeout(syncGifs, 100);
+                }
+            });
+        }, {
+            threshold: 0.3 // Trigger when 30% of the grid is visible
+        });
+
+        observer.observe(grid);
+
+        // Initial sync after a short delay to let page load
+        setTimeout(syncGifs, 500);
+    }
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize core functionality
@@ -419,6 +473,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new LoadingAnimations();
     new BackToTop();
     new ClipboardManager();
+    new GifSynchronizer();
 
     // Add any additional initialization here
     console.log('Personal website initialized successfully!');

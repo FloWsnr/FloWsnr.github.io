@@ -1,0 +1,147 @@
+/* Physics Blog Post - Grid Styles for GIF Displays */
+
+/* 3x3 Grid with no spacing - used for intro section */
+.gif-grid-3x3-nospace {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 0;
+    margin: 2rem 0;
+    max-width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.gif-grid-3x3-nospace img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border: none;
+    margin: 0;
+    border-radius: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gif-grid-3x3-nospace img:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+    z-index: 1;
+    position: relative;
+}
+
+/* 4x2 Grid with no spacing - used for comparison sections */
+.gif-grid-4x2-nospace {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 0;
+    margin: 2rem 0;
+    max-width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.gif-grid-4x2-nospace img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border: none;
+    margin: 0;
+    border-radius: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gif-grid-4x2-nospace img:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+    z-index: 1;
+    position: relative;
+}
+
+/* 3x2 Grid with no spacing - used for long-horizon predictions */
+.gif-grid-3x2-nospace {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 0;
+    margin: 2rem 0;
+    max-width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.gif-grid-3x2-nospace img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border: none;
+    margin: 0;
+    border-radius: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gif-grid-3x2-nospace img:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+    z-index: 1;
+    position: relative;
+}
+
+/* Architecture image special styling */
+.arch-image {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gif-grid-3x3-nospace,
+    .gif-grid-4x2-nospace,
+    .gif-grid-3x2-nospace {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .arch-image {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .gif-grid-3x3-nospace,
+    .gif-grid-4x2-nospace,
+    .gif-grid-3x2-nospace {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .gif-grid-3x3-nospace img,
+    .gif-grid-4x2-nospace img,
+    .gif-grid-3x2-nospace img {
+        margin-bottom: 0.5rem;
+    }
+
+    .arch-image {
+        max-width: 100%;
+    }
+}
+
+/* Authors styling specific to physics blog post */
+.authors {
+    text-align: center;
+    font-style: italic;
+    margin: 1rem 0 2rem 0;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}

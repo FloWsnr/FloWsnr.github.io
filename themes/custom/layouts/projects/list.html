@@ -1,0 +1,52 @@
+{{ define "main" }}
+<div class="container">
+    <header class="section-header">
+        <h1>{{ .Title }}</h1>
+        {{ if .Content }}
+        <div class="section-description">
+            {{ .Content }}
+        </div>
+        {{ end }}
+    </header>
+
+    <div class="projects-grid">
+        {{ range .Pages }}
+        <article class="project-item">
+            {{ if .Params.image }}
+            <div class="project-image">
+                <img src="{{ .Params.image }}" alt="{{ .Params.image_alt | default .Title }}" class="clickable-image">
+            </div>
+            {{ end }}
+            <div class="project-content">
+                <h2 class="project-title">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h2>
+                {{ if .Params.summary }}
+                <p class="project-summary">{{ .Params.summary }}</p>
+                {{ else if .Summary }}
+                <p class="project-summary">{{ .Summary }}</p>
+                {{ end }}
+                {{ if .Params.tech_stack }}
+                <div class="project-tech">
+                    {{ range .Params.tech_stack }}
+                    <span class="tech-tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+                {{ end }}
+                <div class="project-links">
+                    <a href="{{ .Permalink }}" class="read-more">Learn more →</a>
+                    {{ if .Params.github_url }}
+                    <a href="{{ .Params.github_url }}" target="_blank" rel="noopener" class="github-link">GitHub →</a>
+                    {{ end }}
+                    {{ if .Params.project_url }}
+                    <a href="{{ .Params.project_url }}" target="_blank" rel="noopener" class="project-link">Live demo →</a>
+                    {{ end }}
+                </div>
+            </div>
+        </article>
+        {{ else }}
+        <p class="no-content">No projects yet.</p>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

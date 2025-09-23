@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta name="author" content="{{ .Site.Params.author }}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Meta tags for social sharing -->
+    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Permalink }}">
+</head>
+<body>
+    <!-- Header -->
+    {{ partial "header.html" . }}
+
+    <!-- Main Content -->
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <!-- Footer -->
+    {{ partial "footer.html" . }}
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div id="modalCaption"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

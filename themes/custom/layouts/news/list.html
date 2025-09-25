@@ -15,15 +15,8 @@
             <div class="news-meta">
                 <time class="news-date">{{ .Date.Format "January 2, 2006" }}</time>
             </div>
-            <h2 class="news-title">
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </h2>
-            {{ if .Params.summary }}
-            <p class="news-summary">{{ .Params.summary }}</p>
-            {{ else if .Summary }}
-            <p class="news-summary">{{ .Summary }}</p>
-            {{ end }}
-            <a href="{{ .Permalink }}" class="read-more">Read more →</a>
+            <h2 class="news-title">{{ .Title }}</h2>
+            <div class="news-full-content">{{ .Content }}</div>
         </article>
         {{ else }}
         <p class="no-content">No news yet.</p>

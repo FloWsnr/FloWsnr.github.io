@@ -15,19 +15,19 @@
         <article class="hobby-item {{ if $isEven }}image-left{{ else }}image-right{{ end }}">
             {{ if .Params.image }}
             <div class="hobby-image">
+                {{ if strings.HasSuffix .Params.image ".mp4" }}
+                <video controls class="clickable-image">
+                    <source src="{{ .Params.image }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                {{ else }}
                 <img src="{{ .Params.image }}" alt="{{ .Params.image_alt | default .Title }}" class="clickable-image">
+                {{ end }}
             </div>
             {{ end }}
             <div class="hobby-content">
-                <h2 class="hobby-title">
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>
-                </h2>
-                {{ if .Params.description }}
-                <p class="hobby-description">{{ .Params.description }}</p>
-                {{ else if .Summary }}
-                <p class="hobby-description">{{ .Summary }}</p>
-                {{ end }}
-                <a href="{{ .Permalink }}" class="read-more">Read more →</a>
+                <h2 class="hobby-title">{{ .Title }}</h2>
+                <div class="hobby-full-content">{{ .Content }}</div>
             </div>
         </article>
         {{ else }}

@@ -1,12 +1,12 @@
-+++
-title = 'Towards a Physics Foundation Model'
-date = '2025-09-25T20:49:03+02:00'
-draft = false
-summary = 'A new transformer-based model that learns multiple physical systems and generalizes to unseen scenarios.'
-tags = ['machine-learning', 'physics', 'foundation model']
-categories = []
-custom_css = ['physics-blog.css']
-+++
+---
+title: "Towards a Physics Foundation Model"
+date: 2025-09-23T20:49:03+02:00
+draft: false
+summary: "A new transformer-based model that learns multiple physical systems and generalizes to unseen scenarios."
+tags: ["machine-learning", "physics", "foundation model"]
+categories: []
+custom_css: ["physics-blog.css"]
+---
 
 <div class="authors">
 Florian Wiesner, Matthias Wessling, Stephen Baek

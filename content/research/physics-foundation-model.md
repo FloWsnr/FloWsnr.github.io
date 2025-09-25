@@ -12,4 +12,5 @@ image_alt = 'Euler shock waves'
 tags = ['foundation-model', 'machine-learning']
 +++
 
-This research explores novel computational approaches for handling massive datasets efficiently. Our work focuses on practical implementations that can be deployed in real-world scenarios.
+With this work, I wanted to explore whether the concept of foundation models (LLMs for language) can be applied to physics simulations. The idea is to train a single model on a large corpus of diverse simulation data, such that it can generalize to new physical systems without retraining.
+I also wrote a [blog post](https://flowsnr.github.io/blog/physics-foundation-model/) explaining the work in more detail.

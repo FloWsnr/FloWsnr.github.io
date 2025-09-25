@@ -25,23 +25,28 @@
                     <span class="research-publication">{{ .Params.publication }}</span>
                     {{ end }}
                 </div>
-                <h2 class="research-title">
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>
-                </h2>
+                <h2 class="research-title">{{ .Title }}</h2>
                 {{ if .Params.authors }}
                 <div class="research-authors">
                     {{ delimit .Params.authors ", " }}
                 </div>
                 {{ end }}
+                <div class="research-description">{{ .Content }}</div>
                 {{ if .Params.abstract }}
-                <p class="research-abstract">{{ .Params.abstract }}</p>
-                {{ else if .Summary }}
-                <p class="research-abstract">{{ .Summary }}</p>
+                <div class="research-abstract-section">
+                    <div class="research-abstract" id="abstract-{{ $index }}" style="display: none;">
+                        <p>{{ .Params.abstract }}</p>
+                    </div>
+                </div>
                 {{ end }}
-                <div class="research-links">
-                    <a href="{{ .Permalink }}" class="read-more">Read more →</a>
+                <div class="research-buttons">
+                    {{ if .Params.abstract }}
+                    <button class="btn btn-secondary abstract-toggle" onclick="toggleAbstract({{ $index }})">
+                        <span class="toggle-text">Show Abstract</span>
+                    </button>
+                    {{ end }}
                     {{ if .Params.paper_url }}
-                    <a href="{{ .Params.paper_url }}" target="_blank" rel="noopener" class="paper-link">View paper →</a>
+                    <a href="{{ .Params.paper_url }}" target="_blank" rel="noopener" class="btn btn-primary">View Paper</a>
                     {{ end }}
                 </div>
                 {{ if .Params.tags }}
@@ -58,4 +63,20 @@
         {{ end }}
     </div>
 </div>
+
+<script>
+function toggleAbstract(index) {
+    const abstractDiv = document.getElementById('abstract-' + index);
+    const button = event.target.closest('.abstract-toggle');
+    const toggleText = button.querySelector('.toggle-text');
+
+    if (abstractDiv.style.display === 'none') {
+        abstractDiv.style.display = 'block';
+        toggleText.textContent = 'Hide Abstract';
+    } else {
+        abstractDiv.style.display = 'none';
+        toggleText.textContent = 'Show Abstract';
+    }
+}
+</script>
 {{ end }}

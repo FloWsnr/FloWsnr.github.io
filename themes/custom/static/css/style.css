@@ -461,9 +461,93 @@ a:hover {
     font-style: italic;
 }
 
-.research-abstract {
+.research-description {
     margin-bottom: 1rem;
-    opacity: 0.8;
+}
+
+.research-abstract-section {
+    margin-bottom: 1rem;
+}
+
+.research-abstract {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--code-bg);
+    border-radius: 0.25rem;
+    border-left: 4px solid var(--accent-color);
+}
+
+.research-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Button Styles */
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+    color: white;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: var(--border-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+}
+
+/* Research specific button styles */
+.research-buttons .btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    text-decoration: none;
+    font-family: inherit;
+}
+
+.research-buttons .abstract-toggle {
+    background-color: var(--border-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.research-buttons .abstract-toggle:hover {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
 }
 
 .research-links {
@@ -899,7 +983,8 @@ code {
     }
 
     .project-links,
-    .research-links {
+    .research-links,
+    .research-buttons {
         flex-direction: column;
         gap: 0.5rem;
     }

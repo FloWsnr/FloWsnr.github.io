@@ -10,6 +10,7 @@ theme = 'custom'
   github = 'https://github.com/FloWsnr'
   linkedin = 'https://www.linkedin.com/in/florian-wiesner-17665a196/'
   googlescholar = 'https://scholar.google.com/citations?user=rvqCcpgAAAAJ&hl=en'
+  x = 'https://x.com/f_wiesner'
 
 [markup]
   [markup.goldmark]

@@ -25,6 +25,7 @@ Florian Wiesner, Matthias Wessling, Stephen Baek
 </div>
 
 Paper: [arXiv](https://arxiv.org/abs/2509.13805)
+Weights: [HuggingFace](https://huggingface.co/flwi/Physics-Foundation-Model)
 
 ## TLDR
 

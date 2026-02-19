@@ -46,3 +46,10 @@ theme = 'custom'
   name = 'News'
   url = '/news/'
   weight = 6
+
+[[menu.main]]
+  name = 'CV'
+  url = '/files/cv.pdf'
+  weight = 7
+  [menu.main.params]
+    download = true

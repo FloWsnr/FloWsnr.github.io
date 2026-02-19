@@ -9,7 +9,7 @@
             <ul class="nav-links desktop-nav">
                 {{ range .Site.Menus.main }}
                 <li>
-                    <a href="{{ .URL }}" {{ if $.IsMenuCurrent "main" . }}class="active"{{ end }}>
+                    <a href="{{ .URL }}" {{ if .Params.download }}download{{ end }} {{ if $.IsMenuCurrent "main" . }}class="active"{{ end }}>
                         {{ .Name }}
                     </a>
                 </li>
@@ -26,7 +26,7 @@
                 <ul class="mobile-nav-menu" id="mobile-nav-menu">
                     {{ range .Site.Menus.main }}
                     <li>
-                        <a href="{{ .URL }}" {{ if $.IsMenuCurrent "main" . }}class="active"{{ end }}>
+                        <a href="{{ .URL }}" {{ if .Params.download }}download{{ end }} {{ if $.IsMenuCurrent "main" . }}class="active"{{ end }}>
                             {{ .Name }}
                         </a>
                     </li>

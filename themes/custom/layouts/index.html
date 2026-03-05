@@ -30,7 +30,7 @@
                         <div class="item-date">{{ .Date.Format "Jan 2, 2006" }}</div>
                         <h3>{{ .Title }}</h3>
                         {{ if .Params.summary }}
-                        <p class="item-summary">{{ .Params.summary }}</p>
+                        <p class="item-summary">{{ .Params.summary | markdownify }}</p>
                         {{ end }}
                     </article>
                     {{ else }}
@@ -53,7 +53,7 @@
                         <div class="item-date">{{ .Date.Format "Jan 2, 2006" }}</div>
                         <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
                         {{ if .Params.summary }}
-                        <p class="item-summary">{{ .Params.summary }}</p>
+                        <p class="item-summary">{{ .Params.summary | markdownify }}</p>
                         {{ end }}
                         {{ if .Params.tags }}
                         <div class="item-tags">

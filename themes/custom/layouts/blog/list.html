@@ -26,7 +26,7 @@
                 <a href="{{ .Permalink }}">{{ .Title }}</a>
             </h2>
             {{ if .Params.summary }}
-            <p class="blog-summary">{{ .Params.summary }}</p>
+            <p class="blog-summary">{{ .Params.summary | markdownify }}</p>
             {{ else }}
             <p class="blog-summary">{{ .Summary }}</p>
             {{ end }}

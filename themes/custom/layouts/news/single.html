@@ -10,7 +10,7 @@
 
         {{ if .Params.summary }}
         <section class="news-summary">
-            <p class="lead">{{ .Params.summary }}</p>
+            <p class="lead">{{ .Params.summary | markdownify }}</p>
         </section>
         {{ end }}
 

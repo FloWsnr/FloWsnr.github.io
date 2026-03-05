@@ -33,7 +33,7 @@
         {{ if .Params.summary }}
         <section class="project-summary">
             <h2>Overview</h2>
-            <p>{{ .Params.summary }}</p>
+            <p>{{ .Params.summary | markdownify }}</p>
         </section>
         {{ end }}
 

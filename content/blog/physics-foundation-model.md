@@ -9,7 +9,7 @@ custom_css: ["physics-blog.css"]
 ---
 
 <div class="authors">
-Florian Wiesner, Matthias Wessling, Stephen Baek
+Florian Wiesner, Zoë Gray, Matthias Wessling, Stephen Baek
 </div>
 
 <div class="gif-grid-3x3-nospace">
@@ -30,8 +30,11 @@ Youtube: [Video](https://www.youtube.com/watch?v=6tKNwIhHk9s)
 
 ## TLDR
 
+The paper is now accepted at the AI4Physics workshop at ICML 2026.
+
 In our paper "Towards a Physics Foundation Model", we introduce a transformer-based model designed to learn multiple physical systems. Our goal is to create a unified framework — a Physics Foundation Model — that can understand and predict physical phenomena across multiple scales and domains. Importantly, such a foundation model **must be
 capable of generalizing to new physical systems and conditions not seen during training**. We compare our model's performance against traditional physics-surrogate models and demonstrate its ability to generalize to unseen scenarios.
+
 
 
 ## A Foundation Model for Physics — Why?

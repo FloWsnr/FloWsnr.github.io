@@ -2,7 +2,7 @@
 title = 'Applied AI Scientist at Mistral'
 date = '2026-06-07'
 draft = false
-summary = "I've joined Mistral AI as an Applied AI Scientist."
+summary = "I've joined Mistral AI as an Applied AI Scientist & Research Engineer."
 featured = false
 +++
 
